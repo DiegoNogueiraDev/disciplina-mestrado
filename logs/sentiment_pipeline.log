@@ -11536,3 +11536,323 @@
  't': 'month'}
 2025-07-10 20:14:58,334 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=com%C3%A9rcio+exterior&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
 2025-07-10 20:14:58,335 - prawcore - DEBUG - Response: 200 (None bytes) (rst-301:rem-515.0:used-485 ratelimit) at 1752189298.3351676
+2025-07-10 20:14:58,562 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189298.5627973
+2025-07-10 20:14:58,562 - prawcore - DEBUG - Data: None
+2025-07-10 20:14:58,563 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'exportação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:14:58,797 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=exporta%C3%A7%C3%A3o&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:14:58,797 - prawcore - DEBUG - Response: 200 (None bytes) (rst-301:rem-514.0:used-486 ratelimit) at 1752189298.797566
+2025-07-10 20:14:59,049 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189299.0497706
+2025-07-10 20:14:59,049 - prawcore - DEBUG - Data: None
+2025-07-10 20:14:59,049 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'importação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:14:59,288 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=importa%C3%A7%C3%A3o&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:14:59,288 - prawcore - DEBUG - Response: 200 (None bytes) (rst-300:rem-513.0:used-487 ratelimit) at 1752189299.28864
+2025-07-10 20:14:59,486 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189299.4864542
+2025-07-10 20:14:59,486 - prawcore - DEBUG - Data: None
+2025-07-10 20:14:59,486 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'brics',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:14:59,830 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=brics&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 7500
+2025-07-10 20:14:59,830 - prawcore - DEBUG - Response: 200 (7500 bytes) (rst-300:rem-512.0:used-488 ratelimit) at 1752189299.8306406
+2025-07-10 20:15:00,049 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189300.0493686
+2025-07-10 20:15:00,049 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:00,049 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'dólar',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:00,281 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=d%C3%B3lar&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:00,281 - prawcore - DEBUG - Response: 200 (None bytes) (rst-299:rem-511.0:used-489 ratelimit) at 1752189300.2816687
+2025-07-10 20:15:00,449 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189300.4490256
+2025-07-10 20:15:00,449 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:00,449 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'moeda',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:00,703 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=moeda&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:00,704 - prawcore - DEBUG - Response: 200 (None bytes) (rst-299:rem-510.0:used-490 ratelimit) at 1752189300.7040782
+2025-07-10 20:15:00,893 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189300.8938277
+2025-07-10 20:15:00,893 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:00,894 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'sanções',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:01,126 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=san%C3%A7%C3%B5es&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:01,127 - prawcore - DEBUG - Response: 200 (None bytes) (rst-299:rem-509.0:used-491 ratelimit) at 1752189301.1271749
+2025-07-10 20:15:01,403 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189301.4034066
+2025-07-10 20:15:01,403 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:01,403 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'retaliação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'hot',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:01,639 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=retalia%C3%A7%C3%A3o&restrict_sr=True&sort=hot&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:01,640 - prawcore - DEBUG - Response: 200 (None bytes) (rst-298:rem-508.0:used-492 ratelimit) at 1752189301.6400652
+2025-07-10 20:15:01,925 - scrapers.reddit - INFO -   Buscando posts 'top' em r/worldnews
+2025-07-10 20:15:01,925 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189301.9254699
+2025-07-10 20:15:01,925 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:01,925 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'trump',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:03,414 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=trump&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 52525
+2025-07-10 20:15:03,550 - prawcore - DEBUG - Response: 200 (52525 bytes) (rst-297:rem-507.0:used-493 ratelimit) at 1752189303.5500424
+2025-07-10 20:15:03,596 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189303.5962436
+2025-07-10 20:15:03,596 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:03,596 - prawcore - DEBUG - Params: {'after': 't3_1ljfcah',
+ 'limit': 300,
+ 'q': 'trump',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:04,581 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=trump&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&after=t3_1ljfcah&raw_json=1 HTTP/1.1" 200 48256
+2025-07-10 20:15:04,717 - prawcore - DEBUG - Response: 200 (48256 bytes) (rst-296:rem-506.0:used-494 ratelimit) at 1752189304.717669
+2025-07-10 20:15:04,918 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189304.9184194
+2025-07-10 20:15:04,918 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:04,918 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'tarifa',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:05,164 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=tarifa&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:05,164 - prawcore - DEBUG - Response: 200 (None bytes) (rst-294:rem-505.0:used-495 ratelimit) at 1752189305.164817
+2025-07-10 20:15:05,420 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189305.4206526
+2025-07-10 20:15:05,420 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:05,420 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'taxa',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:05,659 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=taxa&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:05,660 - prawcore - DEBUG - Response: 200 (None bytes) (rst-294:rem-504.0:used-496 ratelimit) at 1752189305.660154
+2025-07-10 20:15:05,895 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189305.8959417
+2025-07-10 20:15:05,896 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:05,896 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'imposto',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:06,137 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=imposto&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:06,138 - prawcore - DEBUG - Response: 200 (None bytes) (rst-294:rem-503.0:used-497 ratelimit) at 1752189306.1383762
+2025-07-10 20:15:06,337 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189306.3372743
+2025-07-10 20:15:06,337 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:06,337 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'brasil',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:06,575 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=brasil&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:06,576 - prawcore - DEBUG - Response: 200 (None bytes) (rst-293:rem-502.0:used-498 ratelimit) at 1752189306.5762992
+2025-07-10 20:15:06,700 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189306.700703
+2025-07-10 20:15:06,700 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:06,700 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'eua',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:06,937 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=eua&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:06,937 - prawcore - DEBUG - Response: 200 (None bytes) (rst-293:rem-501.0:used-499 ratelimit) at 1752189306.937763
+2025-07-10 20:15:07,198 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189307.1987345
+2025-07-10 20:15:07,198 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:07,198 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'estados unidos',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:07,432 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=estados+unidos&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:07,432 - prawcore - DEBUG - Response: 200 (None bytes) (rst-292:rem-500.0:used-500 ratelimit) at 1752189307.432902
+2025-07-10 20:15:07,621 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189307.621308
+2025-07-10 20:15:07,621 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:07,621 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'donald trump',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:07,929 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=donald+trump&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 5697
+2025-07-10 20:15:07,929 - prawcore - DEBUG - Response: 200 (5697 bytes) (rst-292:rem-499.0:used-501 ratelimit) at 1752189307.9295886
+2025-07-10 20:15:08,134 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189308.1346433
+2025-07-10 20:15:08,134 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:08,134 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'tarifas',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:08,374 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=tarifas&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:08,375 - prawcore - DEBUG - Response: 200 (None bytes) (rst-291:rem-498.0:used-502 ratelimit) at 1752189308.375338
+2025-07-10 20:15:08,545 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189308.5455325
+2025-07-10 20:15:08,545 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:08,545 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'protecionismo',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:08,798 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=protecionismo&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:08,799 - prawcore - DEBUG - Response: 200 (None bytes) (rst-291:rem-497.0:used-503 ratelimit) at 1752189308.7991638
+2025-07-10 20:15:08,973 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189308.973603
+2025-07-10 20:15:08,973 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:08,973 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'guerra comercial',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:09,210 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=guerra+comercial&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:09,211 - prawcore - DEBUG - Response: 200 (None bytes) (rst-290:rem-496.0:used-504 ratelimit) at 1752189309.2114367
+2025-07-10 20:15:09,462 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189309.4624343
+2025-07-10 20:15:09,462 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:09,462 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'economia',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:09,704 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=economia&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:09,704 - prawcore - DEBUG - Response: 200 (None bytes) (rst-290:rem-495.0:used-505 ratelimit) at 1752189309.70455
+2025-07-10 20:15:09,808 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189309.8082144
+2025-07-10 20:15:09,808 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:09,808 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'comércio exterior',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:10,041 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=com%C3%A9rcio+exterior&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:10,042 - prawcore - DEBUG - Response: 200 (None bytes) (rst-290:rem-494.0:used-506 ratelimit) at 1752189310.0422359
+2025-07-10 20:15:10,151 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189310.151218
+2025-07-10 20:15:10,151 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:10,151 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'exportação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:10,391 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=exporta%C3%A7%C3%A3o&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:10,391 - prawcore - DEBUG - Response: 200 (None bytes) (rst-289:rem-493.0:used-507 ratelimit) at 1752189310.391905
+2025-07-10 20:15:10,623 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189310.623313
+2025-07-10 20:15:10,623 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:10,623 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'importação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:10,857 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=importa%C3%A7%C3%A3o&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:10,857 - prawcore - DEBUG - Response: 200 (None bytes) (rst-289:rem-492.0:used-508 ratelimit) at 1752189310.857499
+2025-07-10 20:15:11,096 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189311.0960853
+2025-07-10 20:15:11,096 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:11,096 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'brics',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:11,447 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=brics&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 7528
+2025-07-10 20:15:11,448 - prawcore - DEBUG - Response: 200 (7528 bytes) (rst-288:rem-491.0:used-509 ratelimit) at 1752189311.4481258
+2025-07-10 20:15:11,554 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189311.5544786
+2025-07-10 20:15:11,554 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:11,554 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'dólar',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:11,800 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=d%C3%B3lar&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:11,800 - prawcore - DEBUG - Response: 200 (None bytes) (rst-288:rem-490.0:used-510 ratelimit) at 1752189311.800936
+2025-07-10 20:15:12,032 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189312.0322058
+2025-07-10 20:15:12,032 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:12,032 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'moeda',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:12,270 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=moeda&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:12,270 - prawcore - DEBUG - Response: 200 (None bytes) (rst-287:rem-489.0:used-511 ratelimit) at 1752189312.270976
+2025-07-10 20:15:12,496 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189312.496022
+2025-07-10 20:15:12,496 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:12,496 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'sanções',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:12,731 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=san%C3%A7%C3%B5es&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:12,731 - prawcore - DEBUG - Response: 200 (None bytes) (rst-287:rem-488.0:used-512 ratelimit) at 1752189312.731942
+2025-07-10 20:15:12,971 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189312.9717863
+2025-07-10 20:15:12,971 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:12,971 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'retaliação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'top',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 20:15:13,211 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /r/worldnews/search/?q=retalia%C3%A7%C3%A3o&restrict_sr=True&sort=top&syntax=lucene&t=month&limit=300&raw_json=1 HTTP/1.1" 200 None
+2025-07-10 20:15:13,212 - prawcore - DEBUG - Response: 200 (None bytes) (rst-286:rem-487.0:used-513 ratelimit) at 1752189313.2120078
+2025-07-10 20:15:13,488 - scrapers.reddit - INFO -   Buscando posts 'new' em r/worldnews
+2025-07-10 20:15:13,488 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/worldnews/search/ at 1752189313.4888175
+2025-07-10 20:15:13,488 - prawcore - DEBUG - Data: None
+2025-07-10 20:15:13,488 - prawcore - DEBUG - Params: {'limit': 300,
+ 'q': 'trump',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
