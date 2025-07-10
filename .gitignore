@@ -11,3 +11,6 @@ cuda_*
 
 # docs
 docs/
+
+# Jupyter Notebook checkpoints 
+.claude/
