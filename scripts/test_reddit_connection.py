@@ -1,82 +1,84 @@
 #!/usr/bin/env python3
 """
-Script para testar conectividade com a API do Reddit.
-Diagnóstico rápido de credenciais PRAW.
+Script para testar conectividade com Reddit API
 """
 
-import os
 import sys
-from pathlib import Path
-
-# Adicionar src ao path
-sys.path.append(str(Path(__file__).parent.parent / 'src'))
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 import praw
 from dotenv import load_dotenv
+import logging
+
+# Configurar logging
+logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 def test_reddit_connection():
-    """Testa conexão com Reddit API usando credenciais do .env"""
+    """Testar conexão com Reddit API"""
     
     # Carregar variáveis de ambiente
     load_dotenv()
     
-    required_vars = [
-        'REDDIT_CLIENT_ID',
-        'REDDIT_CLIENT_SECRET', 
-        'REDDIT_USER_AGENT'
-    ]
-    
-    # Verificar se todas as variáveis estão definidas
-    missing_vars = []
-    for var in required_vars:
-        if not os.getenv(var):
-            missing_vars.append(var)
+    # Verificar se credenciais estão configuradas
+    required_vars = ['REDDIT_ID', 'REDDIT_SECRET', 'REDDIT_AGENT']
+    missing_vars = [var for var in required_vars if not os.getenv(var)]
     
     if missing_vars:
-        print("❌ ERRO: Variáveis de ambiente não configuradas:")
-        for var in missing_vars:
-            print(f"   - {var}")
-        print("\n🔧 Configure o arquivo .env com suas credenciais do Reddit")
+        logger.error(f"❌ Variáveis de ambiente faltando: {missing_vars}")
+        logger.info("📋 Configure as credenciais no arquivo .env:")
+        logger.info("   1. Copie .env.example para .env")
+        logger.info("   2. Acesse https://www.reddit.com/prefs/apps")
+        logger.info("   3. Crie um novo app (tipo 'script')")
+        logger.info("   4. Adicione as credenciais ao arquivo .env")
         return False
     
     try:
         # Inicializar cliente Reddit
         reddit = praw.Reddit(
-            client_id=os.getenv('REDDIT_CLIENT_ID'),
-            client_secret=os.getenv('REDDIT_CLIENT_SECRET'),
-            user_agent=os.getenv('REDDIT_USER_AGENT')
+            client_id=os.getenv('REDDIT_ID'),
+            client_secret=os.getenv('REDDIT_SECRET'),
+            user_agent=os.getenv('REDDIT_AGENT'),
+            check_for_async=False
         )
         
-        # Teste básico: obter 1 post do subreddit popular
-        print("🔄 Testando conexão com Reddit API...")
+        logger.info("🔗 Testando conexão com Reddit API...")
         
-        subreddit = reddit.subreddit('popular')
-        post = next(subreddit.hot(limit=1))
+        # Testar acesso básico
+        subreddit = reddit.subreddit('brasil')
+        logger.info(f"✅ Conectado ao r/brasil: {subreddit.display_name}")
         
-        print(f"✅ SUCESSO: Conexão estabelecida!")
-        print(f"   📝 Post teste: {post.title[:50]}...")
-        print(f"   🔗 URL: {post.url}")
-        print(f"   👤 User-Agent: {os.getenv('REDDIT_USER_AGENT')}")
+        # Testar busca
+        logger.info("🔍 Testando busca...")
+        results = list(subreddit.search('trump', limit=1))
+        
+        if results:
+            post = results[0]
+            logger.info(f"✅ Busca funcionando: '{post.title[:50]}...'")
+        else:
+            logger.info("⚠️ Nenhum resultado encontrado para 'trump'")
+        
+        # Testar rate limits
+        logger.info("📊 Informações da API:")
+        logger.info(f"   Rate limit: {reddit.auth.limits}")
         
         return True
         
     except Exception as e:
-        print(f"❌ ERRO na conexão: {str(e)}")
-        print("\n🔧 Possíveis soluções:")
-        print("   1. Verificar credenciais no .env")
-        print("   2. Verificar se o app Reddit está configurado corretamente")
-        print("   3. Verificar conectividade com a internet")
+        logger.error(f"❌ Erro na conexão: {e}")
         return False
 
-if __name__ == "__main__":
-    print("🧪 Teste de Conectividade - Reddit API")
-    print("=" * 40)
+def main():
+    """Função principal"""
+    logger.info("🚀 Testando conectividade com Reddit API")
     
-    success = test_reddit_connection()
-    
-    if success:
-        print("\n🎉 Reddit API funcionando corretamente!")
-        sys.exit(0)
+    if test_reddit_connection():
+        logger.info("✅ Conexão com Reddit API funcionando!")
+        logger.info("🎯 Pronto para coletar dados sobre Trump/Brasil")
     else:
-        print("\n💥 Falha na conexão com Reddit API")
-        sys.exit(1)
+        logger.error("❌ Falha na conexão com Reddit API")
+        logger.info("📚 Verifique as instruções no README.md")
+
+if __name__ == '__main__':
+    main()

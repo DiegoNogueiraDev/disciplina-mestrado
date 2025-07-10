@@ -1,16 +1,16 @@
-# 🎯 Pipeline de Monitoramento de Sentimento - Redes Sociais PT-BR
+# 🎯 Pipeline de Monitoramento de Sentimento - Reddit PT-BR
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![CUDA](https://img.shields.io/badge/CUDA-12.1-green.svg)](https://developer.nvidia.com/cuda-downloads)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Projeto de Pesquisa**: Pipeline automatizado para coleta, processamento e análise de sentimento em posts sobre tópicos específicos no X/Twitter e Reddit, com foco em conteúdo em português brasileiro.
+> **Projeto de Pesquisa**: Pipeline automatizado para coleta, processamento e análise de sentimento em posts sobre tópicos específicos no Reddit, com foco em conteúdo em português brasileiro.
 
 ## 📋 Visão Geral
 
-Este projeto implementa um pipeline completo de análise de sentimento para redes sociais, desde a coleta de dados até a visualização de resultados. Desenvolvido com foco em **experimentos científicos** e **reprodutibilidade**, o sistema permite:
+Este projeto implementa um pipeline completo de análise de sentimento para dados do Reddit, desde a coleta de dados até a visualização de resultados. Desenvolvido com foco em **experimentos científicos** e **reprodutibilidade**, o sistema permite:
 
-- **Coleta automatizada** de dados do X/Twitter (via snscrape) e Reddit (via PRAW)
+- **Coleta automatizada** de dados do Reddit (via PRAW)
 - **Pré-processamento** especializado para português brasileiro com SpaCy
 - **Rotulagem assistida** usando Label Studio
 - **Modelos de ML** otimizados para GPU (FastText + MLP)
@@ -106,7 +106,7 @@ jupyter lab
 
 ```bash
 # Pipeline completo
-python scripts/collector.py --limit-twitter 1000 --limit-reddit 300
+python scripts/collector.py --limit-reddit 300
 python scripts/preprocess.py --format parquet --hash-users
 python scripts/train_baseline.py --data-path data/processed/topic.parquet --save-metrics
 python scripts/predict_batch.py
@@ -178,7 +178,6 @@ keywords:
   - "imposto"
   - "tributação"
 limits:
-  twitter: 800
   reddit: 200
 ```
 
@@ -202,7 +201,7 @@ jupyter lab
 
 ```bash
 # 1. Coletar dados
-python scripts/collector.py --limit-twitter 800 --limit-reddit 200
+python scripts/collector.py --limit-reddit 200
 
 # 2. Pré-processar
 python scripts/preprocess.py
@@ -244,19 +243,18 @@ python scripts/dashboard_run.py
   - Execução end-to-end do pipeline
   - Análise de resultados
   - Visualizações e métricas
-  - Comparação entre plataformas
+  - Análise de subreddits
 
 ## 🛠️ Funcionalidades Principais
 
 ### 📡 Coleta de Dados
-- **X/Twitter**: Scraping via `snscrape` (sem API key)
 - **Reddit**: API oficial via `praw`
 - **Filtros**: Idioma, localização, qualidade
 - **Formato**: CSV padronizado com timestamp
 
 ### 🔧 Pré-processamento
 - **SpaCy PT-BR**: Tokenização, lematização, POS tagging
-- **Limpeza**: URLs, menções, hashtags, emojis
+- **Limpeza**: URLs, menções, caracteres especiais
 - **Normalização**: Lowercase, remoção de caracteres especiais
 - **Filtros**: Comprimento mínimo/máximo, detecção de idioma
 
@@ -275,7 +273,7 @@ python scripts/dashboard_run.py
 ### 📊 Dashboard
 - **Dash/Plotly**: Interface interativa
 - **Visualizações**: Séries temporais, distribuições
-- **Filtros**: Data, plataforma, sentimento
+- **Filtros**: Data, sentimento, subreddit
 - **Métricas**: Volume, engagement, tendências
 
 ## 🎯 Casos de Uso
@@ -283,7 +281,7 @@ python scripts/dashboard_run.py
 ### Pesquisa Acadêmica
 - Análise de opinião pública sobre políticas
 - Monitoramento de tendências sociais
-- Comparação entre plataformas digitais
+- Análise de discussões no Reddit brasileiro
 
 ### Monitoramento Empresarial
 - Análise de sentimento sobre produtos/serviços
@@ -350,7 +348,7 @@ nvidia-smi -l 1
 ### Datasets
 - **Volume**: 1000+ posts por execução
 - **Qualidade**: >95% em português brasileiro
-- **Distribuição**: Balanceada entre plataformas
+- **Distribuição**: Balanceada entre subreddits
 - **Cobertura**: Múltiplos aspectos do tópico
 
 ### Modelos
@@ -360,15 +358,14 @@ nvidia-smi -l 1
 - **Throughput**: 1000+ posts/minuto
 
 ### Visualizações
-- **Tendências**: Séries temporais por plataforma
+- **Tendências**: Séries temporais por subreddit
 - **Distribuições**: Sentimentos por tópico
-- **Comparações**: X/Twitter vs Reddit
+- **Comparações**: Entre subreddits
 - **Insights**: Padrões e anomalias
 
 ## 📊 Métricas de Sucesso
 
 ### Coleta de Dados
-- ✅ **800+ tweets** coletados por execução
 - ✅ **200+ posts do Reddit** coletados por execução  
 - ✅ **>95% dos textos** em português brasileiro
 - ✅ **Distribuição temporal** adequada (7-30 dias)
@@ -383,7 +380,7 @@ nvidia-smi -l 1
 
 ### Análise e Insights
 - ✅ **Dashboard funcional** com visualizações interativas
-- ✅ **Comparação entre plataformas** (X vs Reddit)
+- ✅ **Análise de subreddits** específicos
 - ✅ **Tendências temporais** identificadas
 - ✅ **Detecção de anomalias** e picos de sentimento
 - ✅ **Reprodutibilidade** com seeds fixas
@@ -447,15 +444,13 @@ python scripts/validate_project.py
 - ✅ **Estrutura**: Todos os diretórios e arquivos essenciais
 - ✅ **Dependências**: Todas as bibliotecas instaladas corretamente
 - ✅ **CUDA**: GPU RTX 3060 Ti detectada e funcional
-- ✅ **Scrapers**: TwitterScraper e RedditScraper funcionais
+- ✅ **Scrapers**: RedditScraper funcional
 - ✅ **Notebooks**: Implementados e prontos para uso
 - ✅ **Scripts**: Todos executáveis e funcionais
-- ✅ **Fallback**: Sistema Selenium funciona quando snscrape falha
 
 ### Limitações Conhecidas
-- **snscrape**: Pode falhar com SSL em alguns ambientes (fallback Selenium ativo)
 - **Reddit**: Requer credenciais válidas no arquivo `.env`
-- **X/Twitter**: Rate limits podem afetar coletas grandes
+- **Rate limits**: Podem afetar coletas grandes
 
 ## 📊 Estrutura de Dados
 
@@ -472,10 +467,6 @@ data/
 
 ### Formatos de Saída
 ```csv
-# Twitter
-timestamp,text,user_hash,platform,retweet_count,favorite_count
-2025-07-10 00:30:00,"Texto do tweet",abc123,twitter,5,20
-
 # Reddit  
 timestamp,title,selftext,subreddit,score,platform,user_hash
 2025-07-10 00:30:00,"Título","Texto do post",brasil,15,reddit,def456
@@ -505,7 +496,7 @@ timestamp,title,selftext,subreddit,score,platform,user_hash
 
 ### ✅ Completamente Implementado
 - **Estrutura do projeto** - Todos os diretórios e arquivos
-- **Scripts de coleta** - Twitter (snscrape + Selenium fallback) e Reddit
+- **Scripts de coleta** - Reddit via PRAW
 - **Notebooks interativos** - 01_coleta.ipynb e 02_rotulagem_eda.ipynb  
 - **Sistema de validação** - `validate_project.py` completo
 - **Scripts de limpeza** - `clean_project.py` para reset do projeto
@@ -514,7 +505,7 @@ timestamp,title,selftext,subreddit,score,platform,user_hash
 
 ### � Pronto para Uso
 1. **Coleta automatizada** - Execute `python scripts/collector.py` ou use notebooks
-2. **Fallback robusto** - Selenium quando snscrape falha
+2. **API robusta** - Reddit API via PRAW
 3. **Validação completa** - Verificação de dependências e estrutura
 4. **GPU acelerada** - RTX 3060 Ti detectada e funcional
 
@@ -533,7 +524,6 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 
 - **SpaCy**: Processamento de linguagem natural
 - **PRAW**: Reddit API wrapper
-- **snscrape**: Twitter scraping
 - **Label Studio**: Plataforma de rotulagem
 - **Dash**: Framework para dashboards
 

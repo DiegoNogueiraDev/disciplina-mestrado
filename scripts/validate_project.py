@@ -77,7 +77,7 @@ class ProjectValidator:
         
         required_packages = [
             "pandas", "numpy", "matplotlib", "seaborn",
-            "snscrape", "praw", "spacy", "fasttext-wheel",
+            "praw", "spacy", "fasttext-wheel",
             "torch", "transformers", "dash", "plotly",
             "yaml", "python-dotenv", "langdetect"
         ]
@@ -134,12 +134,6 @@ class ProjectValidator:
         
         # Adicionar src ao path
         sys.path.insert(0, str(self.project_root / "src"))
-        
-        try:
-            from scrapers.twitter import TwitterScraper
-            self.log_success("TwitterScraper importado com sucesso")
-        except ImportError as e:
-            self.log_error(f"Erro ao importar TwitterScraper: {e}")
         
         try:
             from scrapers.reddit import RedditScraper

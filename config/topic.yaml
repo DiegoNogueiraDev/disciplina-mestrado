@@ -1,28 +1,69 @@
-topic: "Reforma Tributária"
+topic: "Taxas Trump Brasil"
 keywords:
-  - "reforma tributária"
+  - "trump"
+  - "tarifa"
+  - "taxa"
   - "imposto"
-  - "tributação"
-  - "reforma fiscal"
-  - "carga tributária"
+  - "brasil"
+  - "eua"
+  - "estados unidos"
+  - "donald trump"
+  - "tarifas"
+  - "protecionismo"
+  - "guerra comercial"
+  - "economia"
+  - "comércio exterior"
+  - "exportação"
+  - "importação"
+  - "brics"
+  - "dólar"
+  - "moeda"
+  - "sanções"
+  - "retaliação"
 limits:
-  twitter: 800    # Volume principal
-  reddit: 200     # Complemento qualitativo
+  reddit: 8000     # Volume otimizado para análise robusta e treinamento
 filters:
-  min_length: 10
-  max_length: 300
+  min_length: 15   # Textos mais substanciais
+  max_length: 500  # Permitir posts mais longos
   language: "pt"
+  min_score: 0     # Incluir posts com score baixo também
+  days_back: 30    # Últimos 30 dias
 reddit:
   subreddits:
+    # Subreddits principais brasileiros
     - "brasil"
-    - "politica"
     - "brasilivre"
+    - "politica"
+    - "brasildob"
+    - "circojeca"
+    - "desabafos"
+    - "investimentos"
+    - "farialimabets"
+    - "coronabr"
+    - "conversas"
+    # Subreddits econômicos/políticos
+    - "economiadobrasil"
+    - "politics"
+    - "worldnews"
+    - "news"
+    - "economics"
+    - "geopolitics"
+    - "conservative"
+    - "liberal"
+    # Subreddits de discussão geral
+    - "askreddit"
+    - "unpopularopinion"
+    - "changemyview"
+    - "outoftheloop"
+    - "explainlikeimfive"
+  search_methods:
+    - "hot"      # Posts populares
+    - "top"      # Posts mais votados
+    - "new"      # Posts recentes
+    - "rising"   # Posts em ascensão
+  time_filter: "month"  # Último mês
   client_id: "${REDDIT_ID}"
   client_secret: "${REDDIT_SECRET}"
   user_agent: "${REDDIT_AGENT}"
   username: "${REDDIT_USERNAME}"
   password: "${REDDIT_PASSWORD}"
-twitter:
-  lang: "pt"
-  place_country: "BR"
-  exclude_retweets: true
