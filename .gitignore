@@ -8,3 +8,6 @@ venv/
 
 # cuda framework files
 cuda_*
+
+# docs
+docs/
