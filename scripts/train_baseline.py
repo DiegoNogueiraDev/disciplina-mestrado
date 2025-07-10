@@ -10,12 +10,32 @@ import logging
 import pandas as pd
 from pathlib import Path
 import numpy as np
+import json
+from datetime import datetime
 
 # Adicionar src ao path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 from utils.config import load_config, setup_logging
 from models.baseline import BaselineClassifier, create_sample_labeled_data
+
+def save_metrics_to_json(metrics, output_path, model_info=None):
+    """Salva métricas de validação em arquivo JSON"""
+    
+    results = {
+        'timestamp': datetime.now().isoformat(),
+        'model_type': 'baseline_tfidf_logistic',
+        'metrics': metrics,
+        'model_info': model_info or {}
+    }
+    
+    # Criar diretório se não existir
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False, default=str)
+    
+    logging.getLogger(__name__).info(f"Métricas salvas em: {output_path}")
 
 def main():
     """Função principal"""
@@ -32,6 +52,8 @@ def main():
                         help='Número de folds para validação cruzada')
     parser.add_argument('--max-features', type=int, default=10000,
                         help='Número máximo de features TF-IDF')
+    parser.add_argument('--save-metrics', action='store_true',
+                        help='Salvar métricas em results/metrics.json')
     parser.add_argument('--verbose', '-v', action='store_true',
                         help='Modo verboso')
     
@@ -82,6 +104,15 @@ def main():
         
         for metric, scores in cv_results['scores_detail'].items():
             print(f"{metric}: {scores.mean():.3f} (±{scores.std():.3f})")
+        
+        # Salvar métricas em JSON
+        if args.save_metrics:
+            metrics_path = Path(args.output_dir) / "metrics.json"
+            save_metrics_to_json(cv_results, str(metrics_path), model_info={
+                'sample_size': args.sample_size,
+                'max_features': args.max_features,
+                'cv_folds': args.cv_folds
+            })
         
         # Treinar modelo final
         logger.info("=== TREINAMENTO FINAL ===")
