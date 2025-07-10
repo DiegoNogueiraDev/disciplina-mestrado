@@ -947,3 +947,328 @@
 2025-07-09 23:51:10,787 - __main__ - INFO - Dados: data/output
 2025-07-09 23:51:10,787 - __main__ - INFO - Servidor: 0.0.0.0:8050
 2025-07-09 23:51:10,799 - __main__ - ERROR - Erro ao executar dashboard: app.run_server has been replaced by app.run
+2025-07-10 00:34:28,613 - utils.config - INFO - Configuração carregada de: config/topic.yaml
+2025-07-10 00:34:28,613 - __main__ - INFO - Configuração carregada: config/topic.yaml
+2025-07-10 00:34:28,613 - __main__ - INFO - Iniciando coleta para tópico: Reforma Tributária
+2025-07-10 00:34:28,613 - __main__ - INFO - Keywords: ['reforma tributária', 'imposto', 'tributação', 'reforma fiscal', 'carga tributária']
+2025-07-10 00:34:28,613 - __main__ - INFO - Limites - Twitter: 5, Reddit: 200
+2025-07-10 00:34:28,613 - __main__ - INFO - Iniciando coleta do Twitter...
+2025-07-10 00:34:28,613 - __main__ - INFO - Usando snscrape para coleta do Twitter
+2025-07-10 00:34:28,613 - scrapers.twitter - INFO - Scraping Twitter com query: ("reforma tributária" OR "imposto" OR "tributação" OR "reforma fiscal" OR "carga tributária") lang:pt place_country:BR
+2025-07-10 00:34:28,613 - scrapers.twitter - INFO - Limite: 5 tweets
+2025-07-10 00:34:28,614 - snscrape.modules.twitter - INFO - Retrieving scroll page None
+2025-07-10 00:34:28,614 - snscrape.modules.twitter - INFO - Retrieving guest token
+2025-07-10 00:34:28,615 - snscrape.base - INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click
+2025-07-10 00:34:28,615 - snscrape.base - DEBUG - ... with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36'}
+2025-07-10 00:34:28,615 - snscrape.base - DEBUG - ... with environmentSettings: {'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+2025-07-10 00:34:28,615 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): twitter.com:443
+2025-07-10 00:34:28,679 - snscrape.base - INFO - Error retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click: SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))")), retrying
+2025-07-10 00:34:28,680 - snscrape.base - INFO - Waiting 1 seconds
+2025-07-10 00:34:29,680 - snscrape.base - INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click
+2025-07-10 00:34:29,680 - snscrape.base - DEBUG - ... with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36'}
+2025-07-10 00:34:29,680 - snscrape.base - DEBUG - ... with environmentSettings: {'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+2025-07-10 00:34:29,681 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): twitter.com:443
+2025-07-10 00:34:29,724 - snscrape.base - INFO - Error retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click: SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))")), retrying
+2025-07-10 00:34:29,724 - snscrape.base - INFO - Waiting 2 seconds
+2025-07-10 00:34:31,725 - snscrape.base - INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click
+2025-07-10 00:34:31,725 - snscrape.base - DEBUG - ... with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36'}
+2025-07-10 00:34:31,725 - snscrape.base - DEBUG - ... with environmentSettings: {'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+2025-07-10 00:34:31,725 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): twitter.com:443
+2025-07-10 00:34:31,767 - snscrape.base - INFO - Error retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click: SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))")), retrying
+2025-07-10 00:34:31,767 - snscrape.base - INFO - Waiting 4 seconds
+2025-07-10 00:34:35,768 - snscrape.base - INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click
+2025-07-10 00:34:35,768 - snscrape.base - DEBUG - ... with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36'}
+2025-07-10 00:34:35,768 - snscrape.base - DEBUG - ... with environmentSettings: {'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+2025-07-10 00:34:35,768 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (4): twitter.com:443
+2025-07-10 00:34:35,813 - snscrape.base - ERROR - Error retrieving https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click: SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))"))
+2025-07-10 00:34:35,814 - snscrape.base - CRITICAL - 4 requests to https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click failed, giving up.
+2025-07-10 00:34:35,814 - snscrape.base - CRITICAL - Errors: SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))")), SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))")), SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))")), SSLError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')))"))
+2025-07-10 00:34:35,814 - scrapers.twitter - ERROR - Erro ao scraping Twitter: 4 requests to https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click failed, giving up.
+2025-07-10 00:34:35,814 - __main__ - ERROR - Erro na coleta do Twitter: 4 requests to https://twitter.com/search?f=live&lang=en&q=%28%22reforma+tribut%C3%A1ria%22+OR+%22imposto%22+OR+%22tributa%C3%A7%C3%A3o%22+OR+%22reforma+fiscal%22+OR+%22carga+tribut%C3%A1ria%22%29+lang%3Apt+place_country%3ABR&src=spelling_expansion_revert_click failed, giving up.
+2025-07-10 00:34:35,814 - __main__ - INFO - Tentando fallback com Selenium...
+2025-07-10 00:34:35,814 - scrapers.twitter_selenium - INFO - Scraping Twitter com URL: https://twitter.com/search?q=%22reforma%20tribut%C3%A1ria%22%20OR%20%22imposto%22%20OR%20%22tributa%C3%A7%C3%A3o%22%20OR%20%22reforma%20fiscal%22%20OR%20%22carga%20tribut%C3%A1ria%22%20lang%3Apt&src=typed_query&f=live
+2025-07-10 00:34:35,814 - scrapers.twitter_selenium - INFO - Limite: 5 tweets
+2025-07-10 00:34:35,814 - selenium.webdriver.common.selenium_manager - DEBUG - Selenium Manager binary found at: /home/diego/Documentos/disciplina-mestrado/venv/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager
+2025-07-10 00:34:35,814 - selenium.webdriver.common.selenium_manager - DEBUG - Executing process: /home/diego/Documentos/disciplina-mestrado/venv/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager --browser chrome --debug --language-binding python --output json
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - chromedriver not found in PATH
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - chrome not found in PATH
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - chrome not found in the system
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - Required browser: chrome 138.0.7204.94
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - chrome 138.0.7204.94 already exists
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - chrome 138.0.7204.94 is available at /home/diego/.cache/selenium/chrome/linux64/138.0.7204.94/chrome
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - Required driver: chromedriver 138.0.7204.94
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - chromedriver 138.0.7204.94 already in the cache
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - Driver path: /home/diego/.cache/selenium/chromedriver/linux64/138.0.7204.94/chromedriver
+2025-07-10 00:34:35,820 - selenium.webdriver.common.selenium_manager - DEBUG - Browser path: /home/diego/.cache/selenium/chrome/linux64/138.0.7204.94/chrome
+2025-07-10 00:34:35,821 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/diego/.cache/selenium/chromedriver/linux64/138.0.7204.94/chromedriver` in a child process with pid: 240116 using 0 to output -3
+2025-07-10 00:34:35,832 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/home/diego/.cache/selenium/chrome/linux64/138.0.7204.94/chrome', 'args': ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080', '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36']}}}}
+2025-07-10 00:34:35,832 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:52753
+2025-07-10 00:34:36,141 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session HTTP/1.1" 200 0
+2025-07-10 00:34:36,141 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"138.0.7204.94","chrome":{"chromedriverVersion":"138.0.7204.94 (5450257488848fa5bab09dea663ce77edfb17672-refs/branch-heads/7204_50@{#10})","userDataDir":"/tmp/.org.chromium.Chromium.bKWZND"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:42493"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"4d2ef620b65563eda324b56a49111107"}} | headers=HTTPHeaderDict({'Content-Length': '849', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:36,141 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:36,141 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/timeouts {'implicit': 10000}
+2025-07-10 00:34:36,142 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/timeouts HTTP/1.1" 200 0
+2025-07-10 00:34:36,142 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:36,142 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:36,142 - scrapers.twitter_selenium - INFO - Driver do Chrome configurado com sucesso
+2025-07-10 00:34:36,142 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/url {'url': 'https://twitter.com/search?q=%22reforma%20tribut%C3%A1ria%22%20OR%20%22imposto%22%20OR%20%22tributa%...'}
+2025-07-10 00:34:37,497 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/url HTTP/1.1" 200 0
+2025-07-10 00:34:37,497 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:37,497 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:40,497 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/execute/sync {'script': 'return document.body.scrollHeight', 'args': []}
+2025-07-10 00:34:40,518 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/execute/sync HTTP/1.1" 200 0
+2025-07-10 00:34:40,518 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":888} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:40,518 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:40,518 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/elements {'using': 'css selector', 'value': '[data-testid="tweet"]'}
+2025-07-10 00:34:50,572 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/elements HTTP/1.1" 200 0
+2025-07-10 00:34:50,572 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:50,572 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:50,572 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/execute/sync {'script': 'window.scrollTo(0, document.body.scrollHeight);', 'args': []}
+2025-07-10 00:34:50,575 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/execute/sync HTTP/1.1" 200 0
+2025-07-10 00:34:50,575 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:50,575 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:52,575 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/execute/sync {'script': 'return document.body.scrollHeight', 'args': []}
+2025-07-10 00:34:52,577 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/execute/sync HTTP/1.1" 200 0
+2025-07-10 00:34:52,578 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":888} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:34:52,578 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:34:52,578 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/elements {'using': 'css selector', 'value': '[data-testid="tweet"]'}
+2025-07-10 00:35:02,616 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/elements HTTP/1.1" 200 0
+2025-07-10 00:35:02,616 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:35:02,616 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:35:02,616 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/execute/sync {'script': 'window.scrollTo(0, document.body.scrollHeight);', 'args': []}
+2025-07-10 00:35:02,618 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/execute/sync HTTP/1.1" 200 0
+2025-07-10 00:35:02,619 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:35:02,619 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:35:04,619 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:52753/session/4d2ef620b65563eda324b56a49111107/execute/sync {'script': 'return document.body.scrollHeight', 'args': []}
+2025-07-10 00:35:04,621 - urllib3.connectionpool - DEBUG - http://localhost:52753 "POST /session/4d2ef620b65563eda324b56a49111107/execute/sync HTTP/1.1" 200 0
+2025-07-10 00:35:04,621 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":888} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:35:04,622 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:35:04,622 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://localhost:52753/session/4d2ef620b65563eda324b56a49111107 {}
+2025-07-10 00:35:04,680 - urllib3.connectionpool - DEBUG - http://localhost:52753 "DELETE /session/4d2ef620b65563eda324b56a49111107 HTTP/1.1" 200 0
+2025-07-10 00:35:04,680 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-07-10 00:35:04,680 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-07-10 00:35:04,694 - scrapers.twitter_selenium - INFO - Scraping concluído. Total: 0 tweets
+2025-07-10 00:35:04,694 - __main__ - WARNING - Nenhum dado coletado do Twitter (Selenium)
+2025-07-10 00:35:04,694 - __main__ - INFO - Iniciando coleta do Reddit...
+2025-07-10 00:35:04,695 - scrapers.reddit - INFO - Scraping Reddit nos subreddits: ['brasil', 'politica', 'brasilivre']
+2025-07-10 00:35:04,695 - scrapers.reddit - INFO - Keywords: ['reforma tributária', 'imposto', 'tributação', 'reforma fiscal', 'carga tributária']
+2025-07-10 00:35:04,695 - scrapers.reddit - INFO - Limite total: 200 posts
+2025-07-10 00:35:04,695 - scrapers.reddit - INFO - Buscando em r/brasil...
+2025-07-10 00:35:04,696 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasil/search/ at 1752118504.696117
+2025-07-10 00:35:04,696 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:04,696 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'reforma tributária',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:04,697 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.reddit.com:443
+2025-07-10 00:35:04,747 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:04,747 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:04,951 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:04,952 - scrapers.reddit - ERROR - Erro ao buscar em r/brasil com keyword 'reforma tributária': received 401 HTTP response
+2025-07-10 00:35:04,952 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasil/search/ at 1752118504.952356
+2025-07-10 00:35:04,952 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:04,952 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'imposto',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:04,953 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:04,995 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:04,995 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:05,194 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:05,195 - scrapers.reddit - ERROR - Erro ao buscar em r/brasil com keyword 'imposto': received 401 HTTP response
+2025-07-10 00:35:05,195 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasil/search/ at 1752118505.1956336
+2025-07-10 00:35:05,195 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:05,195 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'tributação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:05,196 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:05,241 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:05,241 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:05,451 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:05,452 - scrapers.reddit - ERROR - Erro ao buscar em r/brasil com keyword 'tributação': received 401 HTTP response
+2025-07-10 00:35:05,452 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasil/search/ at 1752118505.4528089
+2025-07-10 00:35:05,452 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:05,452 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'reforma fiscal',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:05,453 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:05,496 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:05,496 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:05,694 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:05,695 - scrapers.reddit - ERROR - Erro ao buscar em r/brasil com keyword 'reforma fiscal': received 401 HTTP response
+2025-07-10 00:35:05,695 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasil/search/ at 1752118505.6952758
+2025-07-10 00:35:05,695 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:05,695 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'carga tributária',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:05,696 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:05,733 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:05,733 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:05,929 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:05,929 - scrapers.reddit - ERROR - Erro ao buscar em r/brasil com keyword 'carga tributária': received 401 HTTP response
+2025-07-10 00:35:05,929 - scrapers.reddit - INFO - Coletados 0 posts de r/brasil
+2025-07-10 00:35:05,930 - scrapers.reddit - INFO - Buscando em r/politica...
+2025-07-10 00:35:05,930 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/politica/search/ at 1752118505.9304717
+2025-07-10 00:35:05,930 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:05,930 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'reforma tributária',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:05,931 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:05,981 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:05,981 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:06,179 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:06,179 - scrapers.reddit - ERROR - Erro ao buscar em r/politica com keyword 'reforma tributária': received 401 HTTP response
+2025-07-10 00:35:06,180 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/politica/search/ at 1752118506.1801822
+2025-07-10 00:35:06,180 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:06,180 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'imposto',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:06,180 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:06,223 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:06,223 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:06,419 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:06,420 - scrapers.reddit - ERROR - Erro ao buscar em r/politica com keyword 'imposto': received 401 HTTP response
+2025-07-10 00:35:06,420 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/politica/search/ at 1752118506.4206574
+2025-07-10 00:35:06,420 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:06,420 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'tributação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:06,421 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:06,456 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:06,456 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:06,655 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:06,656 - scrapers.reddit - ERROR - Erro ao buscar em r/politica com keyword 'tributação': received 401 HTTP response
+2025-07-10 00:35:06,656 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/politica/search/ at 1752118506.6563423
+2025-07-10 00:35:06,656 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:06,656 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'reforma fiscal',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:06,657 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:06,706 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:06,707 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:06,908 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:06,908 - scrapers.reddit - ERROR - Erro ao buscar em r/politica com keyword 'reforma fiscal': received 401 HTTP response
+2025-07-10 00:35:06,909 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/politica/search/ at 1752118506.9091537
+2025-07-10 00:35:06,909 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:06,909 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'carga tributária',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:06,909 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:06,952 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:06,952 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:07,153 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:07,154 - scrapers.reddit - ERROR - Erro ao buscar em r/politica com keyword 'carga tributária': received 401 HTTP response
+2025-07-10 00:35:07,154 - scrapers.reddit - INFO - Coletados 0 posts de r/politica
+2025-07-10 00:35:07,154 - scrapers.reddit - INFO - Buscando em r/brasilivre...
+2025-07-10 00:35:07,154 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasilivre/search/ at 1752118507.1543636
+2025-07-10 00:35:07,154 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:07,154 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'reforma tributária',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:07,155 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:07,196 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:07,196 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:07,399 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:07,400 - scrapers.reddit - ERROR - Erro ao buscar em r/brasilivre com keyword 'reforma tributária': received 401 HTTP response
+2025-07-10 00:35:07,400 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasilivre/search/ at 1752118507.4006298
+2025-07-10 00:35:07,400 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:07,400 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'imposto',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:07,401 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:07,440 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:07,440 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:07,635 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:07,635 - scrapers.reddit - ERROR - Erro ao buscar em r/brasilivre com keyword 'imposto': received 401 HTTP response
+2025-07-10 00:35:07,635 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasilivre/search/ at 1752118507.6359112
+2025-07-10 00:35:07,635 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:07,636 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'tributação',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:07,636 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:07,670 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:07,671 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:07,859 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:07,860 - scrapers.reddit - ERROR - Erro ao buscar em r/brasilivre com keyword 'tributação': received 401 HTTP response
+2025-07-10 00:35:07,860 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasilivre/search/ at 1752118507.8604772
+2025-07-10 00:35:07,860 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:07,860 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'reforma fiscal',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:07,861 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:07,902 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:07,902 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:08,100 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:08,100 - scrapers.reddit - ERROR - Erro ao buscar em r/brasilivre com keyword 'reforma fiscal': received 401 HTTP response
+2025-07-10 00:35:08,100 - prawcore - DEBUG - Fetching: GET https://oauth.reddit.com/r/brasilivre/search/ at 1752118508.1009927
+2025-07-10 00:35:08,101 - prawcore - DEBUG - Data: None
+2025-07-10 00:35:08,101 - prawcore - DEBUG - Params: {'limit': 66,
+ 'q': 'carga tributária',
+ 'raw_json': 1,
+ 'restrict_sr': True,
+ 'sort': 'new',
+ 'syntax': 'lucene',
+ 't': 'month'}
+2025-07-10 00:35:08,101 - urllib3.connectionpool - DEBUG - Resetting dropped connection: www.reddit.com
+2025-07-10 00:35:08,136 - snscrape.base - DEBUG - Connected to: ('151.101.249.140', 443)
+2025-07-10 00:35:08,136 - snscrape.base - DEBUG - Connection cipher: ('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+2025-07-10 00:35:08,344 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 401 None
+2025-07-10 00:35:08,345 - scrapers.reddit - ERROR - Erro ao buscar em r/brasilivre com keyword 'carga tributária': received 401 HTTP response
+2025-07-10 00:35:08,345 - scrapers.reddit - INFO - Coletados 0 posts de r/brasilivre
+2025-07-10 00:35:08,345 - scrapers.reddit - INFO - Scraping concluído. Total: 0 posts únicos
+2025-07-10 00:35:08,345 - __main__ - WARNING - Nenhum dado coletado do Reddit
+2025-07-10 00:35:08,345 - __main__ - INFO - Coleta concluída com sucesso!
