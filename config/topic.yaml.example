@@ -1,0 +1,162 @@
+# Exemplo de configuração para tópicos de análise de sentimento
+# Copie este arquivo para topic.yaml e ajuste conforme necessário
+
+topic: "Exemplo - Produto/Serviço"
+
+# ─── Keywords para coleta ───────────────────────────────────
+keywords:
+  # Termos principais (obrigatórios)
+  - "produto exemplo"
+  - "serviço exemplo"
+  
+  # Variações e sinônimos
+  - "app exemplo"
+  - "aplicativo exemplo"
+  
+  # Termos relacionados
+  - "experiência exemplo"
+  - "atendimento exemplo"
+
+# ─── Limites de coleta ──────────────────────────────────────
+limits:
+  twitter: 800      # Volume principal - bom para tendências
+  reddit: 200       # Complemento qualitativo - discussões mais profundas
+  total_days: 7     # Período de coleta (dias)
+  
+# ─── Filtros de qualidade ───────────────────────────────────
+filters:
+  min_length: 10    # Caracteres mínimos (muito curto = pouco contexto)
+  max_length: 1000  # Caracteres máximos (muito longo = outlier)
+  language: "pt"    # Idioma principal
+  remove_duplicates: true
+  remove_retweets: true
+
+# ─── Configuração Reddit ────────────────────────────────────
+reddit:
+  subreddits:
+    # Subreddits brasileiros gerais
+    - "brasil"
+    - "desabafos"
+    - "conversas"
+    
+    # Subreddits específicos (ajustar conforme tópico)
+    - "ConselhosLegais"    # Para serviços jurídicos
+    - "investimentos"      # Para produtos financeiros
+    - "tecnologia"         # Para produtos tech
+    
+  # Credenciais (configurar em .env)
+  client_id: "${REDDIT_CLIENT_ID}"
+  client_secret: "${REDDIT_CLIENT_SECRET}"
+  user_agent: "${REDDIT_USER_AGENT}"
+  
+  # Configurações de busca
+  sort_by: "relevance"    # relevance, hot, new, top
+  time_filter: "week"     # hour, day, week, month, year, all
+
+# ─── Configuração Twitter/X ─────────────────────────────────
+twitter:
+  lang: "pt"             # Idioma
+  place_country: "BR"    # País (opcional)
+  exclude_retweets: true # Excluir RTs para evitar duplicação
+  
+  # Filtros avançados
+  min_replies: 0         # Mínimo de replies (engajamento)
+  min_likes: 0           # Mínimo de likes
+  verified_only: false   # Apenas contas verificadas
+  
+  # Período de coleta
+  since_days: 7          # Últimos N dias
+
+# ─── Configuração de Processamento ──────────────────────────
+processing:
+  # Limpeza de texto
+  remove_urls: true
+  remove_mentions: true
+  remove_hashtags: false  # Manter hashtags pode ser útil para contexto
+  normalize_spaces: true
+  lowercase: true
+  
+  # Detecção de idioma
+  language_detection: true
+  min_portuguese_confidence: 0.8
+  
+  # Deduplicação
+  similarity_threshold: 0.9  # Textos 90%+ similares = duplicatas
+
+# ─── Configuração de Amostragem ─────────────────────────────
+sampling:
+  # Para rotulagem manual
+  sample_size: 800        # Total para rotular
+  stratify_by: "platform" # Estratificar por plataforma
+  random_seed: 42         # Reprodutibilidade
+  
+  # Distribuição da amostra
+  twitter_ratio: 0.75     # 75% Twitter
+  reddit_ratio: 0.25      # 25% Reddit
+
+# ─── Configuração de Modelos ────────────────────────────────
+models:
+  # Modelo baseline
+  baseline:
+    type: "tfidf_logistic"
+    max_features: 10000
+    ngram_range: [1, 2]
+    cv_folds: 5
+    
+  # Configuração de treino
+  training:
+    test_size: 0.2
+    validation_size: 0.1
+    random_seed: 42
+    
+  # Configuração de GPU
+  device:
+    prefer_gpu: true
+    batch_size: 32
+    mixed_precision: true
+
+# ─── Configuração de Saída ──────────────────────────────────
+output:
+  # Formatos de arquivo
+  save_format: "parquet"   # parquet, csv, json
+  compression: "snappy"    # Para parquet
+  
+  # Estrutura de diretórios
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  results_dir: "results"
+  figures_dir: "figures"
+  
+  # Privacidade e conformidade
+  hash_user_ids: true      # Hash IDs para LGPD
+  remove_personal_info: true
+  
+# ─── Configuração de Monitoramento ──────────────────────────
+monitoring:
+  # Alertas automáticos
+  sentiment_spike_threshold: 2.0  # Desvios padrão para alerta
+  volume_spike_threshold: 3.0     # Desvios padrão para alerta
+  
+  # Notificações (implementação futura)
+  email_alerts: false
+  slack_webhook: null
+  
+# ─── Metadados do Experimento ────────────────────────────────
+experiment:
+  name: "sentimento_exemplo"
+  description: "Análise de sentimento para produto/serviço exemplo"
+  version: "1.0"
+  researcher: "Nome do Pesquisador"
+  institution: "Universidade/Empresa"
+  
+  # Hipóteses de pesquisa
+  hypotheses:
+    - "H1: Sentimento no Twitter é mais volátil que no Reddit"
+    - "H2: Posts longos tendem a ser mais neutros"
+    - "H3: Fins de semana têm menos posts negativos"
+  
+  # Objetivos
+  objectives:
+    - "Detectar padrões temporais de sentimento"
+    - "Comparar plataformas X vs Reddit"
+    - "Identificar tópicos associados a sentimento negativo"

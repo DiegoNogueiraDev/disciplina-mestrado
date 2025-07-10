@@ -10,12 +10,36 @@ import logging
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
+import hashlib
 
 # Adicionar src ao path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 from utils.config import load_config, setup_logging
 from preprocessing.cleaner import TextCleaner
+
+def hash_user_id(user_id):
+    """Cria hash do user_id para conformidade LGPD"""
+    if pd.isna(user_id):
+        return None
+    return hashlib.sha256(str(user_id).encode()).hexdigest()
+
+def save_to_parquet(df, output_path):
+    """Salva DataFrame em formato Parquet usando DuckDB se disponível"""
+    try:
+        import duckdb
+        
+        # Usar DuckDB para salvar parquet de forma eficiente
+        conn = duckdb.connect()
+        conn.execute(f"COPY (SELECT * FROM df) TO '{output_path}' (FORMAT PARQUET)")
+        conn.close()
+        
+        logging.getLogger(__name__).info(f"Dados salvos em Parquet via DuckDB: {output_path}")
+        
+    except ImportError:
+        # Fallback para pandas
+        df.to_parquet(output_path, index=False, compression='snappy')
+        logging.getLogger(__name__).info(f"Dados salvos em Parquet via pandas: {output_path}")
 
 def main():
     """Função principal"""
@@ -28,6 +52,10 @@ def main():
                         help='Diretório para dados processados')
     parser.add_argument('--pattern', type=str, default='*.csv',
                         help='Padrão para buscar arquivos')
+    parser.add_argument('--format', type=str, choices=['csv', 'parquet'], 
+                        default='parquet', help='Formato de saída')
+    parser.add_argument('--hash-users', action='store_true',
+                        help='Hash user IDs para conformidade LGPD')
     parser.add_argument('--combine', action='store_true',
                         help='Combinar todos os arquivos em um único dataset')
     parser.add_argument('--verbose', '-v', action='store_true',
@@ -85,13 +113,18 @@ def main():
                 stats = cleaner.get_processing_stats(processed_df)
                 logger.info(f"Estatísticas - Total: {stats['total_texts']}, Válidos: {stats['valid_texts']}")
                 
+                # Hash de user IDs se solicitado
+                if args.hash_users and 'user_id' in df.columns:
+                    logger.info("Aplicando hash em user IDs")
+                    processed_df['user_id'] = processed_df['user_id'].apply(hash_user_id)
+                
                 if args.combine:
                     # Adicionar à lista para combinar
                     processed_dfs.append(processed_df)
                 else:
                     # Salvar arquivo individual
-                    output_file = output_dir / f"processed_{csv_file.name}"
-                    processed_df.to_csv(output_file, index=False)
+                    output_file = output_dir / f"processed_{csv_file.stem}.parquet"
+                    save_to_parquet(processed_df, output_file)
                     logger.info(f"Dados processados salvos em: {output_file}")
                 
             except Exception as e:
@@ -112,8 +145,8 @@ def main():
             
             # Salvar dataset combinado
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_file = output_dir / f"combined_processed_{timestamp}.csv"
-            combined_df.to_csv(output_file, index=False)
+            output_file = output_dir / f"combined_processed_{timestamp}.parquet"
+            save_to_parquet(combined_df, output_file)
             
             logger.info(f"Dataset combinado salvo em: {output_file}")
             logger.info(f"Total de registros: {len(combined_df)}")
