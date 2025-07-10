@@ -14,3 +14,6 @@ docs/
 
 # Jupyter Notebook checkpoints 
 .claude/
+
+# logs
+logs/
