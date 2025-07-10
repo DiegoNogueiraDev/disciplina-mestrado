@@ -16,4 +16,4 @@ docs/
 .claude/
 
 # logs
-logs/
+logs/*
