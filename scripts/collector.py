@@ -23,6 +23,8 @@ def main():
                         help='Caminho para arquivo de configuração')
     parser.add_argument('--limit-reddit', type=int, default=None,
                         help='Limite de posts do Reddit para coletar')
+    parser.add_argument('--limit-twitter', type=int, default=None,
+                        help='Limite de posts do Twitter (ignorado - não implementado)')
     parser.add_argument('--topic', type=str, default=None,
                         help='Tópico específico para buscar')
     parser.add_argument('--output-dir', type=str, default='data/raw',
@@ -44,6 +46,10 @@ def main():
         
         # Usar limites dos argumentos ou da configuração
         reddit_limit = args.limit_reddit or config.get('limits', {}).get('reddit', 200)
+        
+        # Avisar se Twitter foi especificado
+        if args.limit_twitter and args.limit_twitter > 0:
+            logger.warning(f"Parâmetro --limit-twitter={args.limit_twitter} ignorado. Apenas coleta do Reddit está implementada.")
         
         # Usar tópico do argumento ou da configuração
         topic = args.topic or config.get('topic', 'default')
